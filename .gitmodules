@@ -1,0 +1,3 @@
+[submodule "StepSensorLib"]
+	path = StepSensorLib
+	url = git@github.com:sukesan1984/StepSensorLib.git
