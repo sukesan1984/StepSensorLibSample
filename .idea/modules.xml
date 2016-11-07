@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/StepSensorLibSample.iml" filepath="$PROJECT_DIR$/StepSensorLibSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StepSensorLib/stepsensorlib.iml" filepath="$PROJECT_DIR$/StepSensorLib/stepsensorlib.iml" />
     </modules>
   </component>
 </project>
