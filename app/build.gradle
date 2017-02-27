@@ -27,8 +27,8 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
     // step sensor lib
-    releaseCompile project(path: ':stepsensorlib', configuration: 'release')
-    debugCompile project(path: ':stepsensorlib', configuration: 'debug')
+    releaseCompile project(path: ':StepSensorLib', configuration: 'release')
+    debugCompile project(path: ':StepSensorLib', configuration: 'debug')
 
     // leakcanary
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3'
