@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.sukesan1984.stepsensorlib.Database;
-import com.sukesan1984.stepsensorlib.model.ChunkedStepCount;
+import com.sukesan1984.stepsensorlib.model.ChunkStepCount;
 import com.sukesan1984.stepsensorlib.util.DateUtils;
 import com.sukesan1984.stepsensorlib.util.Logger;
 import com.sukesan1984.stepsensorlib.util.SensorListener;
@@ -67,11 +67,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         findViewById(R.id.update_chunked_lists).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<ChunkedStepCount> lists = db.getNotRecordedChunkedStepCounts();
+                List<ChunkStepCount> lists = db.getNotRecordedChunkedStepCounts();
                 int length = lists.size();
                 long[] dateAndHours = new long[length];
                 int i = 0;
-                for (ChunkedStepCount c : lists) {
+                for (ChunkStepCount c : lists) {
                     dateAndHours[i] = c.unixTimeMillis;
                     i++;
                 }
@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         findViewById(R.id.get_chunked_lists).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<ChunkedStepCount> lists = db.getNotRecordedChunkedStepCounts();
-                for (ChunkedStepCount c : lists) {
+                List<ChunkStepCount> lists = db.getNotRecordedChunkedStepCounts();
+                for (ChunkStepCount c : lists) {
                     Logger.log("UnixTime: " + c.unixTimeMillis + " , steps: " + c.steps);
                 }
             }
